@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>JobQueue::postCoro</title>
+<link rel="stylesheet" href="../../../boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="../../../index.html" title="rippled">
+<link rel="up" href="../ripple__JobQueue.html" title="JobQueue">
+<link rel="prev" href="on_execute.html" title="JobQueue::on_execute">
+<link rel="next" href="processTask.html" title="JobQueue::processTask">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="spirit-nav">
+<a accesskey="p" href="on_execute.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../ripple__JobQueue.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="processTask.html"><img src="../../../images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="rippled.ref.ripple__JobQueue.postCoro"></a><a class="link" href="postCoro.html" title="JobQueue::postCoro">JobQueue::postCoro</a>
+</h4></div></div></div>
+<p>
+          <a class="indexterm" name="id887473"></a>
+Creates a coroutine and adds a job to the queue which will
+          run it.
+        </p>
+<h6>
+<a name="rippled.ref.ripple__JobQueue.postCoro.h0"></a>
+          <span><a name="rippled.ref.ripple__JobQueue.postCoro.synopsis"></a></span><a class="link" href="postCoro.html#rippled.ref.ripple__JobQueue.postCoro.synopsis">Synopsis</a>
+        </h6>
+<pre class="programlisting"><span class="keyword">template</span><span class="special">&lt;</span>
+    <span class="keyword">class</span> <span class="identifier">F</span><span class="special">&gt;</span>
+<span class="keyword">void</span>
+<span class="identifier">postCoro</span><span class="special">(</span>
+    <span class="identifier">JobType</span> <span class="identifier">t</span><span class="special">,</span>
+    <span class="identifier">std</span><span class="special">::</span><span class="identifier">string</span> <span class="keyword">const</span><span class="special">&amp;</span> <span class="identifier">name</span><span class="special">,</span>
+    <span class="identifier">F</span><span class="special">&amp;&amp;</span> <span class="identifier">f</span><span class="special">);</span>
+</pre>
+<h6>
+<a name="rippled.ref.ripple__JobQueue.postCoro.h1"></a>
+          <span><a name="rippled.ref.ripple__JobQueue.postCoro.description"></a></span><a class="link" href="postCoro.html#rippled.ref.ripple__JobQueue.postCoro.description">Description</a>
+        </h6>
+<h6>
+<a name="rippled.ref.ripple__JobQueue.postCoro.h2"></a>
+          <span><a name="rippled.ref.ripple__JobQueue.postCoro.parameters"></a></span><a class="link" href="postCoro.html#rippled.ref.ripple__JobQueue.postCoro.parameters">Parameters</a>
+        </h6>
+<div class="informaltable"><table class="table">
+<colgroup>
+<col>
+<col>
+</colgroup>
+<thead><tr>
+<th>
+                  <p>
+                    Name
+                  </p>
+                </th>
+<th>
+                  <p>
+                    Description
+                  </p>
+                </th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">t</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    The type of job.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">name</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Name of the job.
+                  </p>
+                </td>
+</tr>
+<tr>
+<td>
+                  <p>
+                    <code class="computeroutput"><span class="identifier">f</span></code>
+                  </p>
+                </td>
+<td>
+                  <p>
+                    Has a signature of void(std::shared_ptr&lt;Coro&gt;). Called
+                    when the job executes.
+                  </p>
+                </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer">Copyright &#169; 2012-2016 Ripple Labs Inc.<p>
+        Distributed under the ISC License
+      </p>
+</div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="on_execute.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../ripple__JobQueue.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="processTask.html"><img src="../../../images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>

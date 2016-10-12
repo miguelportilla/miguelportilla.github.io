@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<title>JobQueue::Coro::post</title>
+<link rel="stylesheet" href="../../../boostbook.css" type="text/css">
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="../../../index.html" title="rippled">
+<link rel="up" href="../ripple__JobQueue__Coro.html" title="JobQueue::Coro">
+<link rel="prev" href="operator_eq_.html" title="JobQueue::Coro::operator=">
+<link rel="next" href="running_.html" title="JobQueue::Coro::running_">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div class="spirit-nav">
+<a accesskey="p" href="operator_eq_.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../ripple__JobQueue__Coro.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="running_.html"><img src="../../../images/next.png" alt="Next"></a>
+</div>
+<div class="section">
+<div class="titlepage"><div><div><h4 class="title">
+<a name="rippled.ref.ripple__JobQueue__Coro.post"></a><a class="link" href="post.html" title="JobQueue::Coro::post">JobQueue::Coro::post</a>
+</h4></div></div></div>
+<p>
+          <a class="indexterm" name="id891260"></a>
+Schedule coroutine execution.
+        </p>
+<h6>
+<a name="rippled.ref.ripple__JobQueue__Coro.post.h0"></a>
+          <span><a name="rippled.ref.ripple__JobQueue__Coro.post.synopsis"></a></span><a class="link" href="post.html#rippled.ref.ripple__JobQueue__Coro.post.synopsis">Synopsis</a>
+        </h6>
+<pre class="programlisting"><span class="keyword">void</span>
+<span class="identifier">post</span><span class="special">();</span>
+</pre>
+<h6>
+<a name="rippled.ref.ripple__JobQueue__Coro.post.h1"></a>
+          <span><a name="rippled.ref.ripple__JobQueue__Coro.post.description"></a></span><a class="link" href="post.html#rippled.ref.ripple__JobQueue__Coro.post.description">Description</a>
+        </h6>
+<p>
+          Effects: Returns immediately. A new job is scheduled to resume the execution
+          of the coroutine. When the job runs, the coroutine's stack is restored
+          and execution continues at the beginning of coroutine function or the statement
+          after the previous call to yield. Undefined behavior if called consecutively
+          without a corresponding yield.
+        </p>
+</div>
+<table xmlns:rev="http://www.cs.rpi.edu/~gregod/boost/tools/doc/revision" width="100%"><tr>
+<td align="left"></td>
+<td align="right"><div class="copyright-footer">Copyright &#169; 2012-2016 Ripple Labs Inc.<p>
+        Distributed under the ISC License
+      </p>
+</div></td>
+</tr></table>
+<hr>
+<div class="spirit-nav">
+<a accesskey="p" href="operator_eq_.html"><img src="../../../images/prev.png" alt="Prev"></a><a accesskey="u" href="../ripple__JobQueue__Coro.html"><img src="../../../images/up.png" alt="Up"></a><a accesskey="h" href="../../../index.html"><img src="../../../images/home.png" alt="Home"></a><a accesskey="n" href="running_.html"><img src="../../../images/next.png" alt="Next"></a>
+</div>
+</body>
+</html>
